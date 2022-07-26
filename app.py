@@ -22,7 +22,8 @@ df_merged = pd.read_csv(file_path)
 df_merged = df_merged.set_index('LGA_CODE20')
 
 
-
+app = dash.Dash(__name__)
+server=app.server
 
 
 
