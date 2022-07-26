@@ -5,26 +5,21 @@ import plotly.graph_objects as go
 import plotly.express as px
 import dash
 #from dash import Dash, dcc, html, Input, Output
-from dash import Dash, Input, Output
+#from dash import Dash, Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
-from plotly.subplots import make_subplots
-from PIL import Image
-import dash_bootstrap_components as dbc
+#from plotly.subplots import make_subplots
+#from PIL import Image
+#import dash_bootstrap_components as dbc
 #from shapely import wkt
 import os
-import json
+#import json
 
 script_dir = os.path.dirname(__file__)
 file_path = os.path.join(script_dir, 'raw.csv')
 df_merged = pd.read_csv(file_path)
 
 df_merged = df_merged.set_index('LGA_CODE20')
-
-
-json_path = os.path.join(script_dir, 'data.json')
-with open(json_path) as json_file:
-    lga_json = json.load(json_file)
 
 
 
@@ -109,11 +104,7 @@ fig_indicator.add_trace(go.Indicator(
 ))
 
 
-#Add logo
-image_path = os.path.join(script_dir, 'logo.png')
-html.Img(src=image_path)
 
-pil_img = Image.open(image_path)
 
 
 
@@ -134,16 +125,6 @@ graph_style = {'width': '25%', 'height': '400px', 'float': 'left', "verticalAlig
 
 
 app.layout = html.Div([
-    dbc.Row(
-        html.Div(children=[
-            html.Div([
-                html.Button("Download CSV", id="btn_csv", style={'marginLeft': '1%'}),
-                dcc.Download(id="download-dataframe-csv"),
-                ]),
-            html.Img(src=pil_img, style={'height':'5%', 'width':'5%', 'float': 'right', 'marginRight': '1%'}),
-        ])
-    ),
-    dbc.Row(
         html.Div(children=[
 
             html.Div([dcc.Graph(
@@ -172,7 +153,6 @@ app.layout = html.Div([
                         )
                       ]),
         ])
-    )
 
 ])
 
