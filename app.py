@@ -92,12 +92,6 @@ app.layout = html.Div([
     dbc.Row(
         html.Div(children=[
             html.Div([dcc.Graph(id='map', figure=fig_map1, style=map_style)]),
-            html.Div([dcc.Graph(
-                            id='indicator',
-                            figure=fig_indicator,
-                            style=indicator_style
-                        )]),
-                      ]),
         ])
     )
 
