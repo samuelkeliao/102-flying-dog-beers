@@ -153,7 +153,7 @@ indicator_style = {'width': '25%', 'height': '400px', 'float': 'left', "vertical
 graph_style = {'width': '25%', 'height': '400px', 'float': 'left', "verticalAlign": "bottom"}
 
 
-fig_map1.update_layout(clickmode='event+select')
+#fig_map1.update_layout(clickmode='event+select')
 
 app.layout = html.Div([
     dbc.Row(
