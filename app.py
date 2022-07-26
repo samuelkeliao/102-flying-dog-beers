@@ -100,6 +100,6 @@ app.layout = html.Div([
 
 
 #app.run_server(debug=True, port=8080, use_reloader=False)
-app.run_server()
+app.run_server(debug=True)
 #application.run(debug=True, port=8080)
 
