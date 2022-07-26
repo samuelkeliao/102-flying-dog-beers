@@ -325,6 +325,6 @@ def generate_indicator(selectedData):
         return fig_indicator_sel
 
 #app.run_server(debug=True, port=8080, use_reloader=False)
-app.run_server(port=8080)
+app.run_server(port=8050)
 #application.run(debug=True, port=8080)
 
